@@ -291,9 +291,10 @@
             <a href="#" class="logo">GBG Holidays</a>
           </div>
           <p>
-            Explore the world with ease and excitement through our all-in-one
-            bus travel platform. Your journey begins here — where smooth
-            planning meets unforgettable road experiences.
+            Experience the world with us! From breathtaking landscapes to
+            cultural wonders, we bring you unforgettable journeys. Join us in
+            exploring the beauty of travel and creating memories that last a
+            lifetime.
           </p>
           <ul class="footer__socials">
             <li>
@@ -324,6 +325,11 @@
                 <span><i class="ri-phone-fill"></i></span>+91 12345 67890
               </a>
             </li>
+             <li>
+              <a href="#">
+                <span><i class="ri-phone-fill"></i></span>+91 12345 67890
+              </a>
+            </li>
             <li>
               <a href="#">
                 <span><i class="ri-record-mail-line"></i></span>
@@ -338,15 +344,32 @@
           </ul>
         </div>
         <div class="footer__col">
-          <h4>Subscribe</h4>
-          <form action="#!">
-            <input type="text" placeholder="Enter your email" />
-            <button class="btn">Subscribe</button>
-          </form>
-        </div>
+  <h4>Connect with us</h4>
+  <form onsubmit="sendWhatsApp(event)">
+    <input type="text" id="name" placeholder="Enter your name" required />
+    <input type="tel" id="number" placeholder="Enter your phone number" required />
+    <input type="text" id="message" placeholder="Enter your message" required />
+    <button class="btn" type="submit">Submit</button>
+  </form>
+</div>
+
+<script>
+  function sendWhatsApp(event) {
+    event.preventDefault();
+    const phoneNumber = "911234567890"; // Replace with your WhatsApp number
+    const name = document.getElementById("name").value;
+    const number = document.getElementById("number").value;
+    const message = document.getElementById("message").value;
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      `Name: ${name}\nNumber: ${number}\nMessage: ${message}`
+    )}`;
+    window.open(url, "_blank");
+  }
+</script>
+
       </div>
      <div class="footer__bar">
-        Copyright © 2025 Ad Web Comic Agency. All rights reserved.
+        Copyright © 2025 GBG Holidays. All rights reserved.
         <p>
           Distributed by
           <a

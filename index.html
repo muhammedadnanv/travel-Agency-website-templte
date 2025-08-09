@@ -28,9 +28,9 @@
       </div>
       <ul class="nav__links" id="nav-links">
         <li><a href="#home">HOME</a></li>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#tour">TOUR</a></li>
-        <li><a href="#package">PACKAGE</a></li>
+        <li><a href="#package">ABOUT</a></li>
+        <li><a href="#tour">SERVICES</a></li>
+        <li><a href="#about">DESTINATION</a></li>
        <!--<li><a href="#contact">CONTACT</a></li>-->
         <li><a href="#">Contact us</a></li>
       </ul>
@@ -203,20 +203,21 @@
         <img src="img/showcase.webp" alt="showcase" />
       </div>
       <div class="showcase__content">
-        <h4>Ignite Your Wanderlust with Every Travel</h4>
+        <h4>About Us</h4>
         <p>
-          Traveling by bus offers comfort and stunning views on your way to
-          amazing destinations. With spacious seats and air conditioning, you
-          can relax and enjoy the ride, whether you're heading to a vibrant city
-          or a peaceful getaway. It’s the perfect way to travel affordably and
-          conveniently while experiencing the beauty of the journey.
+          Welcome to GBG Holidays, your ultimate travel companion! We are
+          dedicated to making your travel dreams come true. With years of
+          experience in the industry, we offer a wide range of services,
+          including air ticket booking, visa assistance, hotel reservations, and
+          customized tour packages. Our team of experts is here to ensure that
+          your journey is seamless and unforgettable.
         </p>
         <p>
-          Explore the World by Bus with Ease Hop on a bus and experience the joy
-          of travel at your own pace. From comfortable seating to scenic routes,
-          our buses offer the perfect way to explore cities, nature, and
-          everything in between. Whether it's a quick trip or a long adventure,
-          sit back, relax, and enjoy the ride.
+          At GBG Holidays, we believe that travel is not just about reaching a
+          destination; it's about creating memories that last a lifetime. Our
+          commitment to excellence and customer satisfaction sets us apart in
+          the industry. Let us be your trusted partner in exploring the world
+          and experiencing all it has to offer.
         </p>
         <div class="showcase__btn">
           <button class="btn">
@@ -244,20 +245,24 @@
 
     <section class="section__container discover__container">
       <h2 class="section__header">
-        Discover Peace, Culture, and Devotion with Our Temple  Travels
+        Discover the Beauty of Travel with GBG Holidays
       </h2>
       <p class="section__description">
-        Witness Stunning Landscapes from the Comfort of Your Bus Seat"
+        At GBG Holidays, we believe that travel is not just about reaching a
+        destination; it's about creating memories that last a lifetime. Our
+        commitment to excellence and customer satisfaction sets us apart in
+        the industry. Let us be your trusted partner in exploring the world
+        and experiencing all it has to offer.
       </p>
       <div class="discover__grid">
         <div class="discover__card">
           <span><i class="ri-camera-lens-line"></i></span>
-          <h4>Your Road, Your Story</h4>
+          <h4>Scenic Journeys</h4>
           <p>
-            Experience the freedom of travel with our comfortable and reliable
-            bus trips. Enjoy stunning views along the way while relaxing in
-            spacious seats. Whether it's a short trip or a long journey, our
-            buses ensure a smooth and enjoyable ride.
+            Experience the beauty of nature with our scenic bus tours. From
+            rolling hills to majestic mountains, our comfortable travel will take
+            you through breathtaking landscapes. Enjoy the journey as much as
+            the destination with our carefully planned routes.
           </p>
         </div>
         <div class="discover__card">
@@ -266,7 +271,7 @@
           <p>
             Embark on a journey through the mesmerizing coastal wonders. Enjoy
             the serene beauty of pristine beaches, stunning cliffs, and
-            breathtaking ocean views, all from the comfort of our bus. Let the
+            breathtaking ocean views, all from the comfort of our services. Let the
             coastal breeze guide you to unforgettable destinations.
           </p>
         </div>
@@ -275,7 +280,7 @@
           <h4>Historic Landmarks</h4>
           <p>
             Explore the charm of historic landmarks on our specially curated bus
-            tours. Our comfortable buses will take you through iconic sites,
+            tours. Our comfortable services will take you through iconic sites,
             offering insights into their fascinating stories. Sit back, relax,
             and immerse yourself in the rich history that each destination
             holds.
@@ -288,7 +293,7 @@
       <div class="section__container footer__container">
         <div class="footer__col">
           <div class="footer__logo">
-            <a href="#" class="logo">GBG Holidays</a>
+            <a href="index.html" class="logo">GBG Holidays</a>
           </div>
           <p>
             Experience the world with us! From breathtaking landscapes to
@@ -303,9 +308,10 @@
             <li>
               <a href="#!"><i class="ri-instagram-line"></i></a>
             </li>
-            <li>
+            <!--<li>
               <a href="#!"><i class="ri-youtube-line"></i></a>
             </li>
+          -->
           </ul>
         </div>
         <div class="footer__col">
@@ -343,29 +349,45 @@
             </li>
           </ul>
         </div>
-        <div class="footer__col">
+       <div class="footer__col">
   <h4>Connect with us</h4>
-  <form onsubmit="sendWhatsApp(event)">
+  <form id="whatsappForm">
     <input type="text" id="name" placeholder="Enter your name" required />
-    <input type="tel" id="number" placeholder="Enter your phone number" required />
-    <input type="text" id="message" placeholder="Enter your message" required />
+    <input type="tel" id="number" placeholder="Enter your phone number" pattern="[0-9]{10,15}" required />
+    
+    <select id="service" required>
+      <option value="" disabled selected>Select a service</option>
+      <option value="Air Ticket">Air Ticket</option>
+      <option value="Visa Assistance">Visa Assistance</option>
+      <option value="Hotel Booking">Hotel Booking</option>
+      <option value="Tour Packages">Tour Packages</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <textarea id="message" placeholder="Enter your message" required></textarea>
+    
     <button class="btn" type="submit">Submit</button>
   </form>
 </div>
 
 <script>
-  function sendWhatsApp(event) {
-    event.preventDefault();
+  document.getElementById("whatsappForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
     const phoneNumber = "911234567890"; // Replace with your WhatsApp number
-    const name = document.getElementById("name").value;
-    const number = document.getElementById("number").value;
-    const message = document.getElementById("message").value;
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-      `Name: ${name}\nNumber: ${number}\nMessage: ${message}`
-    )}`;
+    const name = document.getElementById("name").value.trim();
+    const number = document.getElementById("number").value.trim();
+    const service = document.getElementById("service").value;
+    const message = document.getElementById("message").value.trim();
+
+    // Build WhatsApp message
+    const text = `Name: ${name}\nNumber: ${number}\nService: ${service}\nMessage: ${message}`;
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+
     window.open(url, "_blank");
-  }
+  });
 </script>
+
 
       </div>
      <div class="footer__bar">

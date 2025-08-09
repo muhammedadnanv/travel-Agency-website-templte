@@ -697,3 +697,47 @@ padding-block: 8rem;
     gap: 2rem;
   }
 }
+
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 16px;
+  color: #333;
+  appearance: none; /* Removes default arrow for custom styling */
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  resize: vertical; /* Allow only vertical resize */
+  min-height: 80px; /* Default height */
+  line-height: 1.4;
+}
+
+/* Focus effect */
+textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+}
+
+/* Disabled state */
+textarea:disabled {
+  background-color: #f5f5f5;
+  color: #999;
+}
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+}

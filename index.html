@@ -20,9 +20,12 @@
   <body>
     <nav>
       <div class="nav__header">
-        <div class="nav__logo">
-          <a href="#" class="logo">GBG Holidays</a>
-        </div>
+       <div class="nav__logo">
+  <a href="#home" class="logo">
+    <img src="https://i.ibb.co/fdcSGP20/gbgholidays-logo-2-page-0001-removebg-preview.png" alt="GBG Holidays Logo" style="height: 100px;">
+  </a>
+</div>
+
         <div class="nav__menu__btn" id="menu-btn">
           <i class="ri-menu-line"></i>
         </div>
@@ -67,11 +70,11 @@
       </p>
       <div class="destination__grid">
         <div class="destination__card">
-          <img src="img/card.jpg" alt="destination" />
+          <img src="https://i.ibb.co/qF4LX7q4/Georgia.jpg" alt="destination" />
           <div class="destination__card__details">
             <div>
-              <h4>Sacred Calm at Badrinath Temple.</h4>
-              <p>Badrinath, Uttarakhand, India</p>
+              <h4>Georgia</h4>
+              <p>the Most loved Destination Around the Globe  </p>
             </div>
             <div class="destination__ratings">
               <span><i class="ri-star-fill"></i></span>
@@ -80,11 +83,11 @@
           </div>
         </div>
         <div class="destination__card">
-          <img src="img/card2.jpg" alt="destination" />
+          <img src="https://i.ibb.co/QvnnpDMB/Azerbaijan.jpg" alt="destination" />
           <div class="destination__card__details">
             <div>
-              <h4>Divine Majesty at Jagannath Temple.</h4>
-              <p>Puri, Odisha, India</p>
+              <h4>Azerbaijan</h4>
+              <p>The  Place of  Azerbaijan traditional culture</p>
             </div>
             <div class="destination__ratings">
               <span><i class="ri-star-fill"></i></span>
@@ -92,25 +95,14 @@
             </div>
           </div>
         </div>
+        
+       
         <div class="destination__card">
-          <img src="img/card3.webp" alt="destination" />
+          <img src="https://i.ibb.co/G4sFWPys/Turkey.jpg" alt="destination" />
           <div class="destination__card__details">
             <div>
-              <h4>Spiritual Serenity at Neem Karoli Temple.</h4>
-              <p>Dehradun, India</p>
-            </div>
-            <div class="destination__ratings">
-              <span><i class="ri-star-fill"></i></span>
-              4.5
-            </div>
-          </div>
-        </div>
-        <div class="destination__card">
-          <img src="img/card4.jpg" alt="destination" />
-          <div class="destination__card__details">
-            <div>
-              <h4>Tranquil Beauty at Kedarnath Temple.</h4>
-              <p>Kedarnath, Uttarakhand, India</p>
+              <h4>Turkey</h4>
+              <p>Most loved Destination</p>
             </div>
             <div class="destination__ratings">
               <span><i class="ri-star-fill"></i></span>
@@ -119,24 +111,11 @@
           </div>
         </div>
         <div class="destination__card">
-          <img src="img/card4.jpg" alt="destination" />
+          <img src="https://i.ibb.co/LX0RtttK/Schengen-C.jpg" alt="destination" />
           <div class="destination__card__details">
             <div>
-              <h4>Tranquil Beauty at Kedarnath Temple.</h4>
-              <p>Kedarnath, Uttarakhand, India</p>
-            </div>
-            <div class="destination__ratings">
-              <span><i class="ri-star-fill"></i></span>
-              4.9
-            </div>
-          </div>
-        </div>
-        <div class="destination__card">
-          <img src="img/card4.jpg" alt="destination" />
-          <div class="destination__card__details">
-            <div>
-              <h4>Tranquil Beauty at Kedarnath Temple.</h4>
-              <p>Kedarnath, Uttarakhand, India</p>
+              <h4>Schengen countries</h4>
+              <p>the schengen countries is the most attrive destination </p>
             </div>
             <div class="destination__ratings">
               <span><i class="ri-star-fill"></i></span>
@@ -242,9 +221,10 @@
       <div class="showcase__image">
         <img src="img/showcase.webp" alt="showcase" />
       </div>
+      
       <div class="showcase__content">
         <h4>About Us</h4>
-        <p>
+        <p >
           Welcome to GBG Holidays, your ultimate travel companion! We are
           dedicated to making your travel dreams come true. With years of
           experience in the industry, we offer a wide range of services,
@@ -278,7 +258,22 @@
         </div>-->
       </div>
     </section>
+    <style>
+      .showcase__image {
+  width: 100%;
+  max-width: 500px; /* Limit container width */
+  height: 300px; /* Fixed height */
+  overflow: hidden; /* Hide excess parts of the image */
+}
 
+.showcase__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Keeps proportions, crops excess */
+  display: block;
+}
+
+    </style>
     <section class="section__container banner__container">
       <div class="banner__card">
         <h4>10+</h4>
@@ -375,8 +370,24 @@
       <div class="section__container footer__container">
         <div class="footer__col">
           <div class="footer__logo">
-            <a href="index.html" class="logo">GBG Holidays</a>
-          </div>
+  <a href="#home" class="logo">
+    <img src="https://i.ibb.co/fdcSGP20/gbgholidays-logo-2-page-0001-removebg-preview.png" 
+         alt="GBG Holidays Logo">
+  </a>
+</div>
+       <style>
+        .footer__logo img {
+  height: 100px;          /* Adjust size */
+  width: auto;           /* Keeps proportions */
+  display: block;        /* Removes bottom gap */
+}
+
+.footer__logo {
+  text-align: center;    /* Centers in footer */
+  padding: 10px 0;       /* Space around logo */
+}
+
+       </style>
           <p>
             Experience the world with us! From breathtaking landscapes to
             cultural wonders, we bring you unforgettable journeys. Join us in
@@ -472,7 +483,7 @@
   document.getElementById("whatsappForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const phoneNumber = "911234567890"; // Replace with your WhatsApp number
+    const phoneNumber = "971564020686"; // Replace with your WhatsApp number
     const name = document.getElementById("name").value.trim();
     const number = document.getElementById("number").value.trim();
     const service = document.getElementById("service").value;
